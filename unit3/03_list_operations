@@ -1,0 +1,51 @@
+n = int(input("Enter number of elements: "))
+
+lst = []
+
+for i in range(n):
+    num = int(input("Enter number: "))
+    lst.append(num)
+
+print("Original List:", lst)
+
+pos = int(input("Enter position to insert: "))
+value = int(input("Enter value: "))
+lst.insert(pos, value)
+print("After Insert:", lst)
+
+value = int(input("Enter value to remove: "))
+if value in lst:
+    lst.remove(value)
+print("After Remove:", lst)
+
+print("Ascending Order:", sorted(lst))
+print("Descending Order:", sorted(lst, reverse=True))
+
+print("Maximum:", max(lst))
+print("Minimum:", min(lst))
+print("Sum:", sum(lst))
+
+print("Concatenation:", lst + [10, 20])
+print("Repetition:", lst * 2)
+print("First Element:", lst[0])
+print("Membership:", 10 in lst)
+
+even = [x for x in lst if x % 2 == 0]
+odd = [x for x in lst if x % 2 != 0]
+squares = [x * x for x in lst]
+
+print("Even Numbers:", even)
+print("Odd Numbers:", odd)
+print("Squares:", squares)
+
+lst.extend([50, 60])
+print("After Extend:", lst)
+
+lst.pop()
+print("After Pop:", lst)
+
+lst.sort()
+print("After Sort:", lst)
+
+lst.reverse()
+print("After Reverse:", lst)
